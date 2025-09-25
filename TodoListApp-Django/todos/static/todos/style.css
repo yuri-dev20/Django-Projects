@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;              
+    display: flex;              
+    justify-content: center;    
+    align-items: center; 
+    background-color: #141414;
+}
+
+.container {
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;              
+    display: flex;              
+    justify-content: center;    
+    align-items: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.container h1 {
+    color: rgb(28, 255, 145);
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin: 20px;
+}
+
+
+.container a {
+    color: rgb(28, 255, 145);
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+}
+
+.container form input {
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+.container form input:focus {
+    outline: none;          
+    border-color: inherit;  
+    box-shadow: none;
+}
+
+.container form button {
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: rgb(60, 60, 255);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.container form button:hover {
+    background-color: rgb(4, 4, 181);
+}
+
+.container .filters a {
+    text-decoration: none;
+    background-color: rgb(60, 60, 255);
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.container ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.container ul li {
+    padding: 40px 20px;
+    font-size: 20px;
+    color: #fff;
+    list-style: none;
+}
+
+.container .btn {
+    margin-left: 10px;
+    text-decoration: none;
+    background: #6e6eff;
+    color: #ffffff;
+}
+
+.container .complete {
+    background: #44f93e;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.container .delete {
+    background: #f93e3e;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 10px;
+}

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'todos/style.css' %}">
+    <title>TodoList APP</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>To-do List</h1>
+
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            <input type="text" name="todo_name" placeholder="Register a new todo.">
+            <button type="submit">Add</button>
+            
+        </form>
+
+        <div class="filters">
+            <a href="?status=completed">Ver concluídos</a>
+            <a href="?status=not_completed">Ver Todos</a>
+        </div>
+        
+        <ul>
+            
+            {% for todo in todos %}
+                 
+                <li>
+
+                    {{ todo.todo_name }} | Added in:{{ todo.added_date }}
+                    
+                    {% if not todo.is_completed %}
+                        <a class="btn complete" href="{% url 'todos:complete' todo.id %}">Concluir</a>
+                    {% endif %}
+
+                    <a class="btn delete" href="{% url 'todos:delete' todo.id %}" onclick="return confirm('Deseja realmente apagar?')">Deletar</a>
+
+                </li>
+
+            {% empty %}
+            
+                <li>There's no todo registered.</li>
+            
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'home:index' %}">Return to homepage</a>
+
+    </div>
+    
+</body>
+</html>

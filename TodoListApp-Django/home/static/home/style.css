@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;              
+  display: flex;              
+  justify-content: center;    
+  align-items: center; 
+  background-color: #141414;
+}
+
+.container h1 {
+    color: rgb(114, 225, 141);
+    font-size: 56px;
+}
+
+.container h2 {
+    color: rgb(234, 248, 238);
+    text-align: center;
+}
+
+.container a {
+    color: rgb(66, 96, 247);
+    text-decoration: none;
+}
+
+.container a:visited {
+    color: rgb(66, 96, 247);
+}
